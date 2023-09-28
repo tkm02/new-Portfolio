@@ -1,0 +1,659 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Quicksand:wght@300;500&family=Sedgwick+Ave+Display&display=swap');
+
+*,::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* background-color: #222020;
+    color: #fff; */
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* NAVBAR */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh; 
+    background-color: #333333;
+    color: #fff;
+    padding: 10px;
+    z-index: 1000;
+}
+nav{
+    height: 100vh;
+}
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    list-style: none;
+}
+.logo{
+    border: 2px solid #1280A8;
+}
+ul img{
+    width: 200px;
+}
+
+.links{
+    /* border: 2px solid; */
+    margin: 40px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.link{
+    margin: 10px;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1.1rem;
+}
+.icon_nom{
+    width: 100%; 
+    /* text-align: center;   */
+}
+hr{
+    margin: 5px 0;
+    width: 100%;
+}
+.icon_nom a{
+    text-decoration: none;
+    color: #fff;
+}
+/* FIN NAVBAR */
+
+/* DEBUT ACCUEIL */
+.sections{
+    width: 80.5%;
+      height: 100vh;
+      display: none;
+      background-color: #222020;
+      position: fixed;
+      right: 0;
+      transform: translateX(100%); /* Déplace les sections vers la droite */
+      transition: transform 0.5s ease;
+}
+section.dark-mode {
+    background-color: #1280A8;
+    color: #ffffff;
+}
+#Accueil{
+    display: flex;
+    /* background-color: #fff; */
+    flex-direction: row;   
+    color: #fff; 
+}
+.presentation{
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 8px;
+}
+.presentation .container{
+    /* border: 2px solid; */
+    padding: 5px;
+    
+}
+.presentation .container h1{
+    font-size: 2.5em;
+    margin: 20px 0;
+
+}
+.presentation .container h1 span{
+    color: #1280A8;
+}
+.presentation .container h2{
+    font-size: 2.2em;
+    margin: 20px 0;
+}
+.presentation .container h2 span{
+    color: #1280A8;
+}
+.presentation .container h3{
+    font-family: monospace;
+    font-weight: 300;
+    margin: 20px 0;
+
+}
+.presentation .container .plus{
+    margin: 20px 0;
+    padding: 15px;
+    width: 200px;
+    background-color: #1280A8;
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: bold;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: background .3s ease-in-out;
+}
+.presentation .container .plus:hover{
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+.images{
+    width: 45%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid; */
+}
+.images .container{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 500px;
+    height: 600px;
+    border: 5px inset #1280A8;
+}
+.images .photo-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2220202b; /* Couleur de l'overlay */
+      
+}
+.images img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s;
+}
+.images:hover img{
+    transform: scale(1.05); 
+}
+.images:hover .photo-overlay{
+    background-color:#222020
+}
+
+.parametre{
+    width: 5%;
+    height: 100vh;
+    margin: 0 5px;
+    /* border: 2px solid; */
+}
+.parametre .container{
+    /* border: 2px solid; */
+    display: flex;
+    margin: 25px 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.parametre .container .rond{
+    border: 1px solid #fff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+    color: #1280A8;
+    border-radius: 50%;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: background .3s ease-in-out;
+}
+.parametre .container .rond:hover{
+    background-color: #fff;
+}
+/* FIN ACCUEIL */
+
+/* DEBUT A PROPOS */
+#propos{
+    /* border: 2px solid #fff; */
+    display: flex;
+    flex-direction: row;
+    overflow-y: scroll;
+}
+.elements{
+    /* border: 2px solid #fff; */
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.titre,.description,.detaille,.boutons,.container-formation-experience{
+    width: 100%;
+    /* border: 2px solid #fff; */
+    margin: 20px 0;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+
+}
+
+.titre{
+    /* background-color: #1280A8; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.8em;
+    position: relative;
+}
+.titre .lignes{
+    /* border: 2px solid; */
+    display: flex;
+    flex-direction: column;
+    width:20% ;
+}
+.titre .lignes .ligne{
+    border: 3.5px solid #1280A8;
+    margin: 3px 0;
+}
+.titre .lignes .first{
+    width: 60%;
+}
+.titre .lignes .second{
+    width: 30%;
+}
+
+.description h3{
+    font-size: 1.8em;
+    /* border: 2px solid; */
+    margin: 10px 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.description h3 span{
+    color: #1280A8;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.description p{
+    /* border: 2px solid; */
+    margin: 15px 0;
+    font-family: monospace;
+    font-size: 1.2em;
+    width: 80%;
+    line-height: 1.3em;
+}
+
+.detaille{
+   display: flex;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.detaille .col{
+    /* border: 2px solid; */
+    width: 100%;   
+    margin: 0 3px; 
+}
+.detaille .col div{
+    border-bottom: 1px solid;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+}
+.detaille .col div h3 span{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 100;
+}
+.boutons button{
+    background-color: #1280A8;
+    padding: 15px;
+    border: 0;
+    border-radius: 15px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1em;
+    width: 30%;
+    color: #fff;
+    cursor: pointer;
+    transition: background .3s ease-in-out;
+}
+.boutons #mevoir{
+    width: 20%;
+}
+.boutons button:hover{
+    background-color: transparent;
+    border: 1px solid;
+}
+.container-formation-experience{
+    display: flex;
+    justify-content: center;
+}
+.container-formation-experience  .col{
+    width: 45%;
+    margin: 0 10px;
+    /* background-color: #1280A8; */
+    display: flex;
+    flex-direction: column;  
+    background-color: #333333; 
+    border-radius: 15px; 
+    padding: 5px;
+}
+.formation{
+    /* border: 2px solid; */
+    /* background-color: #222020; */
+
+}
+.formation h2{
+    margin: 10px 5px;
+}
+.formation-information{
+    display: flex;
+    flex-direction: row;
+
+}
+.formation-information .design{
+    /* background-color: #1280A8; */
+    /* border: 2px solid; */
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+.formation-information .design .rond{
+    width: 20px;
+    height: 20px;
+    background-color: #1280A8;
+    border: 0 ;
+    border-radius: 50%;
+}
+
+.formation-information .design .trait{
+    border: 2px solid;
+    width: 0;
+    height: 100%;
+}
+.formation-information .info{
+    /* border: 2px solid; */
+    /* background-color: #1280A8; */
+    margin: 0 3px;
+    display: flex;
+    flex-direction: column;
+}
+.formation-information .info .formation-date{
+    display: flex;
+    align-items: center;
+    /* border: 1px solid; */
+}
+.formation-information .formation-date h4{
+    margin: 0 5px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    opacity: .63;
+}
+.formation-information .info-filliere{
+    margin: 0 0 10px 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.formation-information .info-filliere h4{
+    font-family: 'Quicksand', sans-serif;
+    /* font-family: monospace; */
+    font-weight: 500;
+    opacity: .63;
+}
+.formation-information .info-description{
+    font-family: monospace;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.experiences{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* FIN A PROPOS */
+
+
+/* DEBUT A COMPETENCES */
+
+#competences{
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+
+}
+
+#competences .container{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+   
+
+}
+.titre,.devweb,.devmobile,.deviot,.infographe{
+    margin: 20px;
+    padding: 15px;
+    width: 100%;
+   
+
+}
+.dev{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    
+}
+.dev h2{
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.dev h2 i{
+    color: #1280A8;
+    font-size: 1.2em;
+}
+.dev .elements{
+   display: flex;
+   flex-direction: row;
+}
+.dev .elements .col{
+    width: 100%;
+    margin: 0 10px;
+}
+.dev .elements .col .standart{
+    /* border: 2px solid; */
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 20px 0 ;
+}
+.dev .elements .col .standart .info{
+    display: flex;
+    width: 100%;
+}
+.dev .elements .col .standart .info .langage{
+    /* border: 2px solid #1280A8; */
+    width: 95%;
+}
+.dev .elements .col .standart .progress-bar {
+    width: 100%;
+    background-color: #333333;
+    border-radius: 4px;
+  }
+  
+.dev .elements .col .standart .progress-bar .progress {
+    height: 10px;
+    background-color: #1280A8;
+    border-radius: 4px;
+  }
+  
+/* FIN A COMPETENCES */
+
+/* DEBUT PROJETS */
+#Projets{
+    display: flex;
+    overflow-y: scroll;
+    
+}
+
+#Projets .elements{
+    /* background-color: #1280A8; */
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    padding: 10px;
+
+
+
+}
+#Projets .elements .mesprojets{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.projfav h2 span{
+    color: #1280A8;
+    font-size: 1.3em;
+}
+
+.projfav .projet-fav{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 15px 0;
+}
+.projet-fav .ligne{
+    display: flex;
+}
+.projet-fav .ligne .proj{
+    /* border: 2px solid; */
+    width: 50%;
+    height: 350px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #333333;
+}
+
+/* FIN PROJETS */
+
+
+/* DEBUT CONTACT */
+
+#contact{
+    /* border: 2px solid #fff; */
+    display: flex;
+    overflow-y: scroll;
+
+}
+
+.contact{
+    width: 95%;
+    /* border: 2px solid #1280A8; */
+}
+.coordonnees{
+    /* border: 2px solid; */
+    display: flex;
+    padding: 10px;
+    margin: 50px 0;
+}
+
+.child-coordonnees{
+    /* background-color: #fff; */
+    width: 50%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px ;
+}
+
+.child-coordonnees i{
+    color: #1280A8;
+    font-size: 1.8rem;
+}
+.child-coordonnees h4{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.child-coordonnees p{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.8rem;
+    opacity: .53;
+    color: #fff;
+}
+.accroche{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.accroche h2{
+    color: #1280A8;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+.accroche p{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: lighter;
+    color: #fff;
+    font-size: .8rem;
+}
+
+.formulaire{
+    /* background-color: #fff; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+.formulaire .ligne{
+    /* border: 2px solid; */
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.formulaire .ligne input,textarea{
+    width: 100%;
+    margin: 0 5px;
+    padding: 12px;
+    border-radius:20px;
+    background-color: #333333;
+    border: 0;
+    font-family: 'Quicksand', sans-serif;
+    outline: none;
+    color: #fff; 
+}
+
+.btn{
+    width: 30%;
+    margin: 0 15px;
+    padding: 10px;
+    border-radius: 15px;
+    border: 0;
+    background-color: #1280A8;
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
+    transition: background .3s ease-in-out;
+}
+.btn:hover{
+    border: 2px solid #fff;
+    background-color: transparent;
+}
